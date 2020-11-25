@@ -1,0 +1,76 @@
+#myChat {
+height: 300px;
+width: 600px;
+
+}
+h3 {
+text-align: center;
+
+}
+.head {
+  display : flexbox; 
+  text-align: center;
+  height:30px;
+
+}
+
+
+
+input {
+width: 50%;
+border: 3px solid lightblue;
+background-color: aliceblue;
+font-size: large;
+}
+
+button {
+width:20%;
+text-align: center;
+border: 1px solid lightblue;
+background-color: rgb(14, 81, 139);
+border-radius: 25px;
+color: rgb(255, 255, 255);
+font-size: large;
+
+}
+
+ .output {
+  overflow-y: scroll;
+   left: 15px;
+position: absolute;
+    margin: 20px ;
+ width:560px;
+height: 300px;
+border: 5px solid lightblue;
+background-image: url(https://st.depositphotos.com/2475357/3803/i/600/depositphotos_38034075-stock-photo-white-geometric-neutral-seamless-background.jpg) ;
+
+
+}
+.msgSent {
+
+font-size: 20px;
+background-color: rgb(174, 204, 230);
+text-align: left;
+margin: 5px;
+
+}
+
+.msgRecieved {
+  margin: 5px;
+ font-size: 20px;
+background-color: rgb(230, 228, 148);
+text-align: right;
+}
+
+a {
+  padding: 5px;
+   right:0;
+  position: absolute;
+color: black;
+  font-size: 20px;
+  border: 2px solid saddlebrown;
+background-color: rgb(214, 193, 193);
+text-align: right;
+align-self: flex-end;
+}
+

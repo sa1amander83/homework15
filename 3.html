@@ -1,0 +1,52 @@
+<main>
+<button id="getRequest">Выполнить </button>
+
+
+<h3> Разрешение экрана</h3>
+<div id="resOutput"></div>
+<h3>Kоординаты</h3>
+<div id="coordOutput"></div>
+
+</main>
+
+<style> 
+    button {
+    height: 50;
+    width: 150;
+    font-size: 20;
+        }
+</style>
+
+<script>
+
+    function pageLoad() {
+        const btn = document.getElementById("getRequest");
+        const output = document.getElementById("coordOutput");
+        const resOutput= document.getElementById("resOutput");
+        btn.addEventListener("click", getCity);
+        const screenWidth = window.screen.width
+        const screenHeight = window.screen.height
+
+    function getCity() {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(access, denied);
+        } else {
+        coordOutput.innerHTML= `<p>Не удалось получить доступ к местоположению</p>`;
+        }
+
+    function access(data) {
+        coordOutput.innerHTML= `<p>${data.coords.longitude} ° долготы, ${data.coords.latitude}° широты</p>`;
+        }
+
+    function denied() {
+        coordOutput.innerHTML= `<p>Вы запретили доступ к местоположению</p>`;
+        }
+        resOutput.innerHTML= `<p>Ширина экрана - ${screenWidth}px, высота экрана - ${screenHeight}px </p>`;
+            }
+        }
+    document.addEventListener("DOMContentLoaded", pageLoad);
+</script>
+
+
+
+
